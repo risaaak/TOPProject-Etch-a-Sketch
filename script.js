@@ -1,10 +1,17 @@
-const container = document.querySelector('.container')
-for(let i=0;i<16;i++){ //column
-    for(let j=0;j<16;j++) { //row
-        const tile = document.createElement('div');
-        tile.classList = 'tile';
-        container.appendChild(tile);
+
+
+generateGrid();
+function generateGrid(size = 16) {
+    const container = document.querySelector('.container')
+    container.setAttribute('style',`grid-template-columns: repeat(${size}, 1fr) ; grid-template-rows: repeat(${size}, 1fr)`)
+    for(let i=0;i<size;i++){ //column
+        for(let j=0;j<size;j++) { //row
+            const tile = document.createElement('div');
+            tile.classList = 'tile';
+            container.appendChild(tile);
+        }
     }
+    start();
 }
 
 start();
