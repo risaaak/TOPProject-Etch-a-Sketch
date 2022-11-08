@@ -1,6 +1,16 @@
-
-
 generateGrid();
+
+resetButton = document.getElementById('reset');
+
+resetButton.addEventListener('click',function(){
+    selectTile = document.getElementsByClassName('tile');
+    for(let i=0;i<selectTile.length;i++){
+        selectTile[i].style.backgroundColor='black';
+        }
+});
+
+
+
 function generateGrid(size = 16) {
     const container = document.querySelector('.container')
     container.setAttribute('style',`grid-template-columns: repeat(${size}, 1fr) ; grid-template-rows: repeat(${size}, 1fr)`)
@@ -14,7 +24,7 @@ function generateGrid(size = 16) {
     start();
 }
 
-start();
+
 
 function start() {
     selectTile = document.getElementsByClassName('tile');
@@ -25,3 +35,4 @@ function start() {
         })
         };
 }
+
