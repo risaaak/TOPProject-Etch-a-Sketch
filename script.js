@@ -40,5 +40,6 @@ function customGrid(){
     while(size>100){
         let size = prompt('Enter the size of the grid');
     }
+    resetTile();
     generateGrid(size);
 }
