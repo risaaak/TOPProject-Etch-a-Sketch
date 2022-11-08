@@ -7,15 +7,14 @@ for(let i=0;i<16;i++){ //column
     }
 }
 
-selectTile = document.getElementsByClassName('tile');
+start();
 
-//change tile color on mouse hover
-for(let i=0;i<selectTile.length;i++){
-    selectTile[i].addEventListener("mouseover" ,function(e) {
-        e.target.style.backgroundColor = 'salmon'
-    })
+function start() {
+    selectTile = document.getElementsByClassName('tile');
+    //change tile color on mouse hover
+    for(let i=0;i<selectTile.length;i++){
+        selectTile[i].addEventListener("mouseover" ,function(e) {
+            e.target.style.backgroundColor = 'salmon'
+        })
+        };
 }
-
-
-
-
