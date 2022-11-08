@@ -14,8 +14,11 @@ body{
 }
 
 .tile {
-    display: inline;
     background-color: black;
     height: 100%;
     width: 100%;
+}
+
+#custom {
+    align-content: right;
 }
