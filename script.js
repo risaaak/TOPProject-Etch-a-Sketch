@@ -1,8 +1,9 @@
 generateGrid();
 
 resetButton = document.getElementById('reset');
-
 resetButton.addEventListener('click', resetTile);
+customButton = document.getElementById('custom');
+customButton.addEventListener('click', customGrid)
 
 function generateGrid(size = 16) {
     const container = document.querySelector('.container')
@@ -34,3 +35,10 @@ function resetTile(){
     }
 }
 
+function customGrid(){
+    let size = prompt('Enter the size of the grid');
+    while(size>100){
+        let size = prompt('Enter the size of the grid');
+    }
+    generateGrid(size);
+}
