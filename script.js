@@ -2,14 +2,7 @@ generateGrid();
 
 resetButton = document.getElementById('reset');
 
-resetButton.addEventListener('click',function(){
-    selectTile = document.getElementsByClassName('tile');
-    for(let i=0;i<selectTile.length;i++){
-        selectTile[i].style.backgroundColor='black';
-        }
-});
-
-
+resetButton.addEventListener('click', resetTile);
 
 function generateGrid(size = 16) {
     const container = document.querySelector('.container')
@@ -24,8 +17,6 @@ function generateGrid(size = 16) {
     start();
 }
 
-
-
 function start() {
     selectTile = document.getElementsByClassName('tile');
     //change tile color on mouse hover
@@ -34,5 +25,12 @@ function start() {
             e.target.style.backgroundColor = 'salmon'
         })
         };
+}
+
+function resetTile(){
+    selectTile = document.getElementsByClassName('tile');
+    for(let i=0;i<selectTile.length;i++){
+        selectTile[i].style.backgroundColor='black';
+    }
 }
 
