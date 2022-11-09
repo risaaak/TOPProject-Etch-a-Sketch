@@ -18,6 +18,13 @@ function generateGrid(size = 16) {
     start();
 }
 
+selectContainer = document.getElementById('container');
+selectContainer.addEventListener('mouseover', determineColor);
+
+function determineColor(){
+    
+}
+
 function start() {
     selectTile = document.getElementsByClassName('tile');
     //change tile color on mouse hover
